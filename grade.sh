@@ -36,8 +36,8 @@ then
                 
             fi     
 
-            javac -cp ".;lib/hamcrest-core-1.3.jar;lib/junit-4.13.2.jar" TestListExamples.java
-            java -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore TestListExamples > test-output.txt
+            javac -cp $CPATH TestListExamples.java
+            java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > test-output.txt
             OKTEST=`grep "OK" test-output.txt`
             FAILTEST1=`grep "Failures: 1" test-output.txt`
             
