@@ -43,6 +43,7 @@ then
             
             if [[ $OKTEST == 'OK (2 tests)' ]]
             then
+                echo 'Both tests passed successfully!'
                 echo '100%'
             elif [[ $FAILTEST1 == 'Tests run: 2,  Failures: 1' ]]
             then
