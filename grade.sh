@@ -47,6 +47,14 @@ then
                 echo '100%'
             elif [[ $FAILTEST1 == 'Tests run: 2,  Failures: 1' ]]
             then
+                CHECK1=`grep "testMergeRightEnd()" test-output.txt`
+                if [[ $? != 0 ]]
+                then
+                    echo 'Please make sure the merge() method is correct'
+                    exit
+                else
+                    echo 'Please make sure the filter() method is correct'
+                fi
                 echo '50%'
             else 
                 echo '0%'    
