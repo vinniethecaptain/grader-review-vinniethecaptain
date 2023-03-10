@@ -51,7 +51,6 @@ then
                 if [[ $? != 0 ]]
                 then
                     echo 'Please make sure the merge() method is correct'
-                    exit
                 else
                     echo 'Please make sure the filter() method is correct'
                 fi
